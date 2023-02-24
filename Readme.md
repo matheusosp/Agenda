@@ -1,7 +1,7 @@
 # Agenda de Contatos
 
 ## Features:
-- ALterar idioma da aplicação em tempo de execução(sem necessidade de build) para pt-BR e en-US através da cultura da Thread
+- Alterar idioma da aplicação em tempo de execução(sem necessidade de build) para pt-BR e en-US através da cultura da Thread
 - Adicionar Pessoa
 - Remover Pessoa
 - Listar Pessoas cadastradas
