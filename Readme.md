@@ -47,3 +47,6 @@ A aplicação de console será executada no terminal.
 Para rodar no VSCODE é preciso:
 - Extensão C# para o Visual Studio Code
 - .NET 7 SDK
+
+Pode ser executada pelo Visual Studio tambem, basta abrir o .csproj ou .sln (não tem Visual Studio para o Linux)
+https://visualstudio.microsoft.com/pt-br/downloads/
