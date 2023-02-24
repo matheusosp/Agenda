@@ -62,7 +62,7 @@
       <option name="presentableId" value="Default" />
       <updated>1677244321501</updated>
       <workItem from="1677244323258" duration="248000" />
-      <workItem from="1677244580894" duration="593000" />
+      <workItem from="1677244580894" duration="938000" />
     </task>
     <servers />
   </component>
@@ -78,13 +78,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Program.cs</url>
-          <line>10</line>
+          <line>11</line>
           <properties documentPath="C:\Users\Mathe\source\repos\ContactBook\ContactBook\Program.cs" initialLine="8" containingFunctionPresentation="method 'Main'">
             <startOffsets>
-              <option value="233" />
+              <option value="281" />
             </startOffsets>
             <endOffsets>
-              <option value="275" />
+              <option value="323" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="1" />
