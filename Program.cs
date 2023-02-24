@@ -97,7 +97,7 @@ namespace ContactBook
            var qtd = int.Parse(Console.ReadLine());
            for (int i = 0; i < qtd; i++)
            {
-               Console.WriteLine("Digite o nome da pessoa: ");
+               Console.WriteLine("Digite o nome da pessoa "+ (i + 1) +": ");
                var name = Console.ReadLine();
                Console.WriteLine("Digite o endereço da pessoa:");
                var endereco = Console.ReadLine();
