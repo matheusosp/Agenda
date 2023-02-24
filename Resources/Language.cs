@@ -24,10 +24,34 @@ namespace ContactBook.Resources
 
             return _resource.GetString(key);
         }
-
-        public static string? Demonstration
+        
+        public static string? SelectLanguage
         {
-            get { return GetString("Demonstration"); }
+            get { return GetString("SelectLanguage"); }
+        }
+        public static string? SelectTheAction
+        {
+            get { return GetString("SelectTheAction"); }
+        }
+        public static string? AddPersons
+        {
+            get { return GetString("AddPersons"); }
+        }
+        public static string? RemovePersons
+        {
+            get { return GetString("RemovePersons"); }
+        }
+        public static string? ListPersons
+        {
+            get { return GetString("ListPersons"); }
+        }
+        public static string? UpdateLanguageString
+        {
+            get { return GetString("UpdateLanguageString"); }
+        }
+        public static string? CloseApplication
+        {
+            get { return GetString("CloseApplication"); }
         }
     }
 }

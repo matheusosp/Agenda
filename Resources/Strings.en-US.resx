@@ -98,7 +98,25 @@
 	<resheader name="writer">
 		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
 	</resheader>
-	<data name="Demonstration" xml:space="preserve">
-		<value>Demonstration</value>
+	<data name="SelectLanguage" xml:space="preserve">
+		<value>Select system language : (1- pt-BR, 2 - en-US) </value>
+	</data>
+	<data name="SelectTheAction" xml:space="preserve">
+		<value>Select the action to perform on the calendar</value>
+	</data>
+	<data name="AddPersons" xml:space="preserve">
+		<value>Add Peoples</value>
+	</data>
+	<data name="RemovePersons" xml:space="preserve">
+		<value>Remove Peoples</value>
+	</data>
+	<data name="ListPersons" xml:space="preserve">
+		<value>List Persons</value>
+	</data>
+	<data name="UpdateLanguageString" xml:space="preserve">
+		<value>Update Language</value>
+	</data>
+	<data name="CloseApplication" xml:space="preserve">
+		<value>Close Application</value>
 	</data>
 </root>

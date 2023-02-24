@@ -16,8 +16,6 @@ namespace ContactBook
             Thread.CurrentThread.CurrentCulture = ci;
             Thread.CurrentThread.CurrentUICulture = ci;
             StartApp();
-
-            Console.ReadLine();
         }
 
         private static void StartApp()
@@ -28,12 +26,12 @@ namespace ContactBook
 
             do
             {
-                Console.WriteLine("Selecione a ação para realizar na agenda");
-                Console.WriteLine("1 - Adicionar Pessoas");
-                Console.WriteLine("2 - Remover Pessoas");
-                Console.WriteLine("3 - Listar Pessoas");
-                Console.WriteLine("4 - Alterar Idioma");
-                Console.WriteLine("5 - Fechar aplicação");
+                Console.WriteLine(Language.SelectTheAction);
+                Console.WriteLine("1 - " + Language.AddPersons);
+                Console.WriteLine("2 - " + Language.RemovePersons);
+                Console.WriteLine("3 - " + Language.ListPersons);
+                Console.WriteLine("4 - " + Language.UpdateLanguageString);
+                Console.WriteLine("5 - " + Language.CloseApplication);
                 var action = Console.ReadLine();
                 switch (action)
                 {
@@ -63,7 +61,7 @@ namespace ContactBook
 
         private static void ChangeLanguage()
         {
-            Console.WriteLine("Selecione o idioma do sistema: (1- pt-BR, 2 - en-US) ");
+            Console.WriteLine(Language.SelectLanguage);
             var option = Console.ReadLine();
             var ci = new CultureInfo("pt-BR");
             if (option == "2")
@@ -75,13 +73,13 @@ namespace ContactBook
         private static void RemovePersons(Agenda agenda)
         {
             Console.WriteLine("Quantas pessoas deseja remover da lista?");
-            var qtd = Console.Read();
+            var qtd = int.Parse(Console.ReadLine());
             if (qtd > agenda.QtdPersons)
             {
                 while (qtd > agenda.QtdPersons)
                 {
                     Console.WriteLine("A quantidade de pessoas a remover é maior do que a quantidade de pessoas registrada, digite outra quantidade");
-                    qtd = Console.Read();
+                    qtd = int.Parse(Console.ReadLine());
                 }
             }
 
