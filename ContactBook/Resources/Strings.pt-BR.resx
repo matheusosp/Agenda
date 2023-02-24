@@ -122,4 +122,46 @@
 	<data name="StarList" xml:space="preserve">
 		<value>Iniciando listagem de contatos</value>
 	</data>
+	<data name="HowManyPeople" xml:space="preserve">
+		<value>Quantas pessoas deseja remover da lista ?</value>
+	</data>
+	<data name="NumberOfPeopleToRemove" xml:space="preserve">
+		<value>A quantidade de pessoas a remover é maior do que a quantidade de pessoas registradas, digite outra quantidade</value>
+	</data>
+	<data name="InvalidOption" xml:space="preserve">
+		<value>Opção invalida, digite a opção novamente</value>
+	</data>
+	<data name="EnterIdOfThePersonToRemoveFromSchedule" xml:space="preserve">
+		<value>Digite o id da pessoa para remover da Agenda</value>
+	</data>
+	<data name="HowManyPeopleAddToTheList" xml:space="preserve">
+		<value>Quantas pessoas deseja adicionar na lista?</value>
+	</data>
+	<data name="EnterThePersonName" xml:space="preserve">
+		<value>Digite o nome da pessoa</value>
+	</data>
+	<data name="EnterThePersonAddress" xml:space="preserve">
+		<value>Digite o endereço da pessoa</value>
+	</data>
+	<data name="EnterThePersonEmail" xml:space="preserve">
+		<value>Digite o email da pessoa</value>
+	</data>
+	<data name="Name" xml:space="preserve">
+		<value>Nome</value>
+	</data>
+	<data name="PersonAdded" xml:space="preserve">
+		<value>Pessoa Adicionada</value>
+	</data>
+	<data name="EmptySchedule" xml:space="preserve">
+		<value>Agenda vazia</value>
+	</data>
+	<data name="PersonRemoved" xml:space="preserve">
+		<value>Pessoa Removida</value>
+	</data>
+	<data name="PersonDoesNotExistInTheSchedule" xml:space="preserve">
+		<value>Pessoa não existe na agenda!</value>
+	</data>
+	<data name="ShowContacts" xml:space="preserve">
+		<value>Listando contatos da agenda!</value>
+	</data>
 </root>

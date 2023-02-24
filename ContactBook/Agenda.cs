@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using ContactBook.Resources;
 using StrategyLibrary.SortingExample;
 
 namespace ContactBook;
@@ -7,42 +8,52 @@ namespace ContactBook;
 public class Agenda
 {
     private List<Person> _persons { get; set; }
-    public int QtdPersons { get; set; }
 
     public Agenda()
     {
         _persons = new List<Person>();
-        QtdPersons = 0;
     }
     public void AddPerson(Person person)
     {
-        person.Id = QtdPersons == 0 ? 1 : _persons.FindLast(p => true)!.Id + 1;
+        person.Id = _persons.Count == 0 ?
+            1 : _persons.FindLast(p => true)!.Id + 1;
         _persons.Add(person);
-        QtdPersons++;
-        Console.WriteLine("Pessoa adicionada: " + person);
+        Console.WriteLine(Language.PersonAdded+": " + person);
         ListPersons();
     }
 
-    public void RemovePerson(int id)
+    public bool RemovePerson(int id)
     {
-        QtdPersons--;
-        _persons.RemoveAll(p => p.Id == id);
-        Console.WriteLine("Pessoa removida Id: " + id);
+        var person = _persons.Find(p => p.Id == id);
+        if (person == null)
+        {
+            Console.WriteLine(Language.PersonDoesNotExistInTheSchedule);
+            return false;
+        }
+
+        _persons.Remove(person);
+        Console.WriteLine(Language.PersonRemoved +" : " + person);
         ListPersons();
+        return true;
     }
 
     public void ListPersons()
     {
-        if (QtdPersons == 0)
+        if (_persons.Count == 0)
         {
-            Console.WriteLine("Agenda vazia");
+            Console.WriteLine(Language.EmptySchedule);
             return;
         }
 
-        Console.WriteLine("Listando contatos ");
+        Console.WriteLine(Language.ShowContacts);
         foreach (var person in _persons)
         {
             Console.WriteLine(person);
         }
+    }
+
+    public int GetQtdContacts()
+    {
+        return _persons.Count;
     }
 }

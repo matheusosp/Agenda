@@ -120,6 +120,48 @@
 		<value>Close Application</value>
 	</data>
 	<data name="StarList" xml:space="preserve">
-		<value>Starting contact list</value>
+		<value>Starting contact listing</value>
+	</data>
+	<data name="HowManyPeople" xml:space="preserve">
+		<value>How many people do you want to remove from the list?</value>
+	</data>
+	<data name="NumberOfPeopleToRemove" xml:space="preserve">
+		<value>The number of people to remove is greater than the number of registered people, enter another number</value>
+	</data>
+	<data name="InvalidOption" xml:space="preserve">
+		<value>Invalid option, enter the option again</value>
+	</data>
+	<data name="EnterIdOfThePersonToRemoveFromSchedule" xml:space="preserve">
+		<value>Enter the id of the person to remove from the Address Book</value>
+	</data>
+	<data name="HowManyPeopleAddToTheList" xml:space="preserve">
+		<value>How many people do you want to add to the list?</value>
+	</data>
+	<data name="EnterThePersonName" xml:space="preserve">
+		<value>Enter the person's name</value>
+	</data>
+	<data name="EnterThePersonAddress" xml:space="preserve">
+		<value>Enter the person's address</value>
+	</data>
+	<data name="EnterThePersonEmail" xml:space="preserve">
+		<value>Enter the person's email</value>
+	</data>
+	<data name="Name" xml:space="preserve">
+		<value>Name</value>
+	</data>
+	<data name="PersonAdded" xml:space="preserve">
+		<value>Person Added</value>
+	</data>
+	<data name="EmptySchedule" xml:space="preserve">
+		<value>Empty Schedule</value>
+	</data>
+	<data name="PersonRemoved" xml:space="preserve">
+		<value>Person Removed</value>
+	</data>
+	<data name="PersonDoesNotExistInTheSchedule" xml:space="preserve">
+		<value>Person does not exist in the Schedule!</value>
+	</data>
+	<data name="ShowContacts" xml:space="preserve">
+		<value>Listing phonebook contacts!</value>
 	</data>
 </root>

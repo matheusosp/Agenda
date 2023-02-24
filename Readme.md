@@ -2,7 +2,6 @@
 
 ## Features:
 - ALterar idioma da aplicação em tempo de execução(sem necessidade de build) para pt-BR e en-US através da cultura da Thread
-- Internacionalização (Apenas o Menu principal esta com suporte a 2 idiomas por falta de tempo para implementar nas outras partes do sistema, mas a estrutura esta pronta bastando colocar a chave e valor para pt-BR e en-US e chamar via Language.Prop que vai funcionar)
 - Adicionar Pessoa
 - Remover Pessoa
 - Listar Pessoas cadastradas

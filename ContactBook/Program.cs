@@ -1,8 +1,7 @@
-﻿using System;
-using System.Globalization;
-using System.Threading;
+﻿using System.Globalization;
 using ContactBook.Resources;
 using StrategyLibrary.SortingExample;
+using static System.Int32;
 
 namespace ContactBook
 {
@@ -32,8 +31,8 @@ namespace ContactBook
                 Console.WriteLine("3 - " + Language.ListPersons);
                 Console.WriteLine("4 - " + Language.UpdateLanguageString);
                 Console.WriteLine("5 - " + Language.CloseApplication);
-                var action = Console.ReadLine();
-                switch (action)
+                var option = Console.ReadLine();
+                switch (option)
                 {
                     case "1":
                         AddPersons(agenda);
@@ -52,7 +51,7 @@ namespace ContactBook
                         quit = true;
                         break;
                     default:
-                        Console.WriteLine("Opção invalida, digite a opção novamente");
+                        Console.WriteLine(Language.InvalidOption);
                         break;
                 }
             } while (quit == false);
@@ -72,41 +71,63 @@ namespace ContactBook
 
         private static void RemovePersons(Agenda agenda)
         {
-            Console.WriteLine("Quantas pessoas deseja remover da lista?");
-            var qtd = int.Parse(Console.ReadLine());
-            if (qtd > agenda.QtdPersons)
+            Console.WriteLine(Language.HowManyPeople);
+            var parseInput = TryParse(Console.ReadLine(), out var qtd);
+            while (parseInput && qtd > agenda.GetQtdContacts())
             {
-                while (qtd > agenda.QtdPersons)
-                {
-                    Console.WriteLine("A quantidade de pessoas a remover é maior do que a quantidade de pessoas registrada, digite outra quantidade");
-                    qtd = int.Parse(Console.ReadLine());
-                }
+                Console.WriteLine(Language.NumberOfPeopleToRemove);
+                parseInput = TryParse(Console.ReadLine(), out qtd);
             }
 
-            for (int i = 0; i < qtd; i++)
+            for (var i = 0; i < qtd; i++)
             {
-                Console.WriteLine("Digite o id da pessoa: ");
-                var id = Console.ReadLine();
-                agenda.RemovePerson(int.Parse(id));
+                Console.WriteLine(Language.EnterIdOfThePersonToRemoveFromSchedule);
+                TryParse(Console.ReadLine(), out var id);
+                var remove =agenda.RemovePerson(id);
+                if (remove == false)
+                    i--;
             }
         }
 
         private static void AddPersons(Agenda agenda)
         {
-           Console.WriteLine("Quantas pessoas deseja adicionar na lista?");
-           var qtd = int.Parse(Console.ReadLine());
-           for (int i = 0; i < qtd; i++)
-           {
-               Console.WriteLine("Digite o nome da pessoa "+ (i + 1) +": ");
-               var name = Console.ReadLine();
-               Console.WriteLine("Digite o endereço da pessoa:");
-               var endereco = Console.ReadLine();
-               Console.WriteLine("Digite o email da pessoa: ");
-               var email = Console.ReadLine();
-               var person = new Person(name,endereco,email);
-               agenda.AddPerson(person);
-           }
+            bool parse;
+            int qtd;
+            do
+            {
+                Console.WriteLine(Language.HowManyPeopleAddToTheList);
+                parse = TryParse(Console.ReadLine(), out qtd);
+            } while (parse == false);
+            
+            for (var i = 0; i < qtd; i++)
+            {
+                var name = GetNameInput(i);
+                var endereco = GetAddressInput(i);
+                var email = GetEmailInput(i);
+                var person = new Person(name!,endereco!,email!);
+                agenda.AddPerson(person);
+            }
         }
-        
+
+        private static string? GetEmailInput(int i)
+        {
+            Console.WriteLine($"{i + 1} - {Language.EnterThePersonEmail} : ");
+            var email = Console.ReadLine();
+            return email;
+        }
+
+        private static string? GetAddressInput(int i)
+        {
+            Console.WriteLine($"{i + 1} - {Language.EnterThePersonAddress } : ");
+            var endereco = Console.ReadLine();
+            return endereco;
+        }
+
+        private static string? GetNameInput(int i)
+        {
+            Console.WriteLine($"{i + 1} - {Language.EnterThePersonName} : ");
+            var name = Console.ReadLine();
+            return name;
+        }
     }
 }

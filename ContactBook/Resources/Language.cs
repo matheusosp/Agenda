@@ -25,37 +25,45 @@ namespace ContactBook.Resources
             return _resource.GetString(key);
         }
         
-        public static string? SelectLanguage
+        public static string? SelectLanguage => GetString("SelectLanguage");
+
+        public static string? SelectTheAction => GetString("SelectTheAction");
+
+        public static string? AddPersons => GetString("AddPersons");
+
+        public static string? RemovePersons => GetString("RemovePersons");
+
+        public static string? ListPersons => GetString("ListPersons");
+
+        public static string? UpdateLanguageString => GetString("UpdateLanguageString");
+
+        public static string? CloseApplication => GetString("CloseApplication");
+
+        public static string? StarList => GetString("StarList");
+
+        public static string? HowManyPeople => GetString("HowManyPeople");
+
+        public static string? NumberOfPeopleToRemove => GetString("NumberOfPeopleToRemove");
+
+        public static string? InvalidOption => GetString("InvalidOption");
+
+        public static string? EnterIdOfThePersonToRemoveFromSchedule
         {
-            get { return GetString("SelectLanguage"); }
+            get { return GetString("EnterIdOfThePersonToRemoveFromSchedule"); }
         }
-        public static string? SelectTheAction
-        {
-            get { return GetString("SelectTheAction"); }
-        }
-        public static string? AddPersons
-        {
-            get { return GetString("AddPersons"); }
-        }
-        public static string? RemovePersons
-        {
-            get { return GetString("RemovePersons"); }
-        }
-        public static string? ListPersons
-        {
-            get { return GetString("ListPersons"); }
-        }
-        public static string? UpdateLanguageString
-        {
-            get { return GetString("UpdateLanguageString"); }
-        }
-        public static string? CloseApplication
-        {
-            get { return GetString("CloseApplication"); }
-        }
-        public static string? StarList
-        {
-            get { return GetString("StarList"); }
-        }
+        public static string? HowManyPeopleAddToTheList => GetString("HowManyPeopleAddToTheList");
+
+        public static string? EnterThePersonName => GetString("EnterThePersonName");
+
+        public static string? EnterThePersonAddress => GetString("EnterThePersonAddress");
+
+        public static string? EnterThePersonEmail => GetString("EnterThePersonEmail");
+
+        public static string? Name => GetString("Name");
+        public static string? PersonAdded => GetString("PersonAdded");
+        public static string? EmptySchedule => GetString("EmptySchedule");
+        public static string? ShowContacts => GetString("ShowContacts");
+        public static string? PersonRemoved => GetString("PersonRemoved");
+        public static string? PersonDoesNotExistInTheSchedule => GetString("PersonDoesNotExistInTheSchedule");
     }
 }
