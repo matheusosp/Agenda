@@ -5,25 +5,25 @@ namespace ContactBook;
 public class Agenda
 {
     private List<Person> _persons { get; set; }
-    private int qtdPersons { get; set; }
+    public int QtdPersons { get; set; }
 
     public Agenda()
     {
         _persons = new List<Person>();
-        qtdPersons = 0;
+        QtdPersons = 0;
     }
     public void AddPerson(Person person)
     {
-        person.Id = qtdPersons == 0 ? 1 : _persons[-1].Id + 1;
+        person.Id = QtdPersons == 0 ? 1 : _persons.FindLast(p => true)!.Id + 1;
         _persons.Add(person);
-        qtdPersons++;
+        QtdPersons++;
         Console.WriteLine("Pessoa adicionada: " + person);
         ListPersons();
     }
 
     public void RemovePerson(int id)
     {
-        qtdPersons--;
+        QtdPersons--;
         _persons.RemoveAll(p => p.Id == id);
         Console.WriteLine("Pessoa removida Id: " + id);
         ListPersons();
