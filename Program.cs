@@ -26,17 +26,37 @@ namespace ContactBook
             var action = Console.Read();
 
             var agenda = new Agenda();
-            if (action == 1)
+            switch (action)
             {
-                AddPersons(agenda);
+                case 1:
+                    AddPersons(agenda);
+                    break;
+                case 2:
+                    RemovePersons(agenda);
+                    break;
+                case 3:
+                    agenda.ListPersons();
+                    break;
             }
 
             Console.ReadLine();
         }
 
+        private static void RemovePersons(Agenda agenda)
+        {
+            Console.WriteLine("Quantas pessoas deseja remover da lista?");
+            var qtd = Console.Read();
+            for (int i = 0; i < qtd; i++)
+            {
+                Console.WriteLine("Digite o id da pessoa: ");
+                var id = Console.Read();
+                agenda.RemovePerson(id);
+            }
+        }
+
         private static void AddPersons(Agenda agenda)
         {
-           Console.WriteLine("Quantas pessoas deseja adionar na lista?");
+           Console.WriteLine("Quantas pessoas deseja adicionar na lista?");
            var qtd = Console.Read();
            for (int i = 0; i < qtd; i++)
            {
@@ -50,14 +70,6 @@ namespace ContactBook
                agenda.AddPerson(person);
            }
         }
-
-        public static IHost CreateHostBuilder(string[] args)
-        {
-            return Host.CreateDefaultBuilder(args)
-                .ConfigureServices((hostBuilderContext, services) =>
-                {
-                })
-                .Build();
-        }
+        
     }
 }

@@ -14,7 +14,7 @@ public class Agenda
     }
     public void AddPerson(Person person)
     {
-        person.Id = qtdPersons;
+        person.Id = qtdPersons == 0 ? 1 : _persons[-1].Id + 1;
         _persons.Add(person);
         qtdPersons++;
         Console.WriteLine("Pessoa adicionada: " + person);
@@ -23,6 +23,7 @@ public class Agenda
 
     public void RemovePerson(int id)
     {
+        qtdPersons--;
         _persons.RemoveAll(p => p.Id == id);
         Console.WriteLine("Pessoa removida Id: " + id);
         ListPersons();
@@ -30,6 +31,7 @@ public class Agenda
 
     public void ListPersons()
     {
+        Console.WriteLine("Listando contatos ");
         foreach (var person in _persons)
         {
             Console.WriteLine(person);
