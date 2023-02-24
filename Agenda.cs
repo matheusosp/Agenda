@@ -31,6 +31,12 @@ public class Agenda
 
     public void ListPersons()
     {
+        if (QtdPersons == 0)
+        {
+            Console.WriteLine("Agenda vazia");
+            return;
+        }
+
         Console.WriteLine("Listando contatos ");
         foreach (var person in _persons)
         {

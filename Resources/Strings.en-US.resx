@@ -119,4 +119,7 @@
 	<data name="CloseApplication" xml:space="preserve">
 		<value>Close Application</value>
 	</data>
+	<data name="StarList" xml:space="preserve">
+		<value>Starting contact list</value>
+	</data>
 </root>

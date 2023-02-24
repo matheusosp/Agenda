@@ -53,5 +53,9 @@ namespace ContactBook.Resources
         {
             get { return GetString("CloseApplication"); }
         }
+        public static string? StarList
+        {
+            get { return GetString("StarList"); }
+        }
     }
 }

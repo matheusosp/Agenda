@@ -119,4 +119,7 @@
 	<data name="CloseApplication" xml:space="preserve">
 		<value>Fechar aplicação</value>
 	</data>
+	<data name="StarList" xml:space="preserve">
+		<value>Iniciando listagem de contatos</value>
+	</data>
 </root>

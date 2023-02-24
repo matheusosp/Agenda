@@ -42,7 +42,7 @@ namespace ContactBook
                         RemovePersons(agenda);
                         break;
                     case "3":
-                        Console.WriteLine("Iniciando listagem de contatos");
+                        Console.WriteLine(Language.StarList);
                         agenda.ListPersons();
                         break;
                     case "4":
