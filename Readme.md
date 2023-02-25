@@ -25,6 +25,16 @@ Para seguir este tutorial, você precisará ter instalado o seguinte:
 
 - .NET 7 SDK
   https://dotnet.microsoft.com/en-us/download/dotnet/7.0
+- Posssiveis comandos para instal o dotnet 7 no ubuntu 22
+```
+wget https://packages.microsoft.com/config/ubuntu/22.10/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+sudo dpkg -i packages-microsoft-prod.deb
+rm packages-microsoft-prod.deb
+
+sudo apt-get update && \
+  sudo apt-get install -y dotnet-sdk-7.0
+```
+- Comando para checkar a instalaçao do .NET dotnet --list-sdks
 ## Passo a Passo
 
 ### 1. Acessar o diretório do projeto
