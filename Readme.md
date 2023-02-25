@@ -17,6 +17,8 @@
 - Design Pattern Strategy
 - Design Pattern Façade
 
+## Foi utilizado o pacote iTextSharp para gerar o Relatorio em PDF(https://www.nuget.org/packages/iTextSharp)
+
 # Como rodar uma Console Application no Linux e Windows com .NET 7
 
 ## Pré-requisitos
