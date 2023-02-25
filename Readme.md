@@ -36,7 +36,8 @@ rm packages-microsoft-prod.deb
 sudo apt-get update && \
   sudo apt-get install -y dotnet-sdk-7.0
 ```
-- Comando para checkar a instalaçao do .NET dotnet --list-sdks
+- Comando para checkar a instalaçao do .NET dotnet 
+```--list-sdks```
 ## Passo a Passo
 
 ### 1. Acessar o diretório do projeto
