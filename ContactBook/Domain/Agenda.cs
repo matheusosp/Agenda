@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using ContactBook.Domain.Interfaces;
 using ContactBook.Resources;
-using StrategyLibrary.SortingExample;
 
-namespace ContactBook;
+namespace ContactBook.Domain;
 
-public class Agenda
+public class Agenda : IAgenda
 {
-    private List<Person> _persons { get; set; }
+    private List<Person> _persons { get; }
 
     public Agenda()
     {

@@ -2,12 +2,20 @@
 
 ## Features:
 - Alterar idioma da aplicação em tempo de execução(sem necessidade de build) para pt-BR e en-US através da cultura da Thread
+- Relatorio em PDF (que fica na na pasta Reports do Projeto quando exportado)
+- Relatorio em PDF em portugues e ingles (vai ser de acordo com o idioma selecionado no menu)
 - Adicionar Pessoa
 - Remover Pessoa
 - Listar Pessoas cadastradas
+- Criação de 4 Pessoas Fakes para teste
 
-## Features não implementadas:
-- Relatorio em PDF
+## Padrões e Principios inplementados:
+- Princípio da Inversão de Dependência (DIP)
+- Princípio da Segregação da Interface (ISP)
+- Princípio da Responsabilidade Única (SRP)
+- Inversão de Controle (IoC)
+- Design Pattern Strategy
+- Design Pattern Façade
 
 # Como rodar uma Console Application no Linux e Windows com .NET 7
 

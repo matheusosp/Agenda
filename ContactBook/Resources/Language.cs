@@ -24,7 +24,14 @@ namespace ContactBook.Resources
 
             return _resource.GetString(key);
         }
-        
+
+        public static void ChangeThreadCulture(string culture)
+        {
+            var ci = new CultureInfo(culture);
+            Thread.CurrentThread.CurrentCulture = ci;
+            Thread.CurrentThread.CurrentUICulture = ci;
+        }
+
         public static string? SelectLanguage => GetString("SelectLanguage");
 
         public static string? SelectTheAction => GetString("SelectTheAction");
@@ -41,9 +48,9 @@ namespace ContactBook.Resources
 
         public static string? StarList => GetString("StarList");
 
-        public static string? HowManyPeople => GetString("HowManyPeople");
+        public static string? HowManyPeopleRemoveToTheList => GetString("HowManyPeopleRemoveToTheList");
 
-        public static string? NumberOfPeopleToRemove => GetString("NumberOfPeopleToRemove");
+        public static string? NumberOfPeopleToRemoveExceeded => GetString("NumberOfPeopleToRemoveExceeded");
 
         public static string? InvalidOption => GetString("InvalidOption");
 
@@ -70,5 +77,7 @@ namespace ContactBook.Resources
         public static string? ContactsDirectoryDate => GetString("ContactsDirectoryDate");
         public static string? Date => GetString("Date");
         public static string? TotalContacts => GetString("TotalContacts");
+        public static string? CreateFourFictionalPeople => GetString("CreateFourFictionalPeople");
+        
     }
 }

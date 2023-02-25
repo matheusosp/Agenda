@@ -122,10 +122,10 @@
 	<data name="StarList" xml:space="preserve">
 		<value>Iniciando listagem de contatos</value>
 	</data>
-	<data name="HowManyPeople" xml:space="preserve">
+	<data name="HowManyPeopleRemoveToTheList" xml:space="preserve">
 		<value>Quantas pessoas deseja remover da lista ?</value>
 	</data>
-	<data name="NumberOfPeopleToRemove" xml:space="preserve">
+	<data name="NumberOfPeopleToRemoveExceeded" xml:space="preserve">
 		<value>A quantidade de pessoas a remover é maior do que a quantidade de pessoas registradas, digite outra quantidade</value>
 	</data>
 	<data name="InvalidOption" xml:space="preserve">
@@ -178,5 +178,8 @@
 	</data>
 	<data name="TotalContacts" xml:space="preserve">
 		<value>Total de Contatos</value>
+	</data>
+	<data name="CreateFourFictionalPeople" xml:space="preserve">
+		<value>Criar 4 Pessoas Fictícias</value>
 	</data>
 </root>

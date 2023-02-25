@@ -1,6 +1,6 @@
 ﻿using ContactBook.Resources;
 
-namespace StrategyLibrary.SortingExample;
+namespace ContactBook.Domain;
 
 public class Person
 {
