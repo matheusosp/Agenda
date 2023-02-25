@@ -187,4 +187,10 @@
     <data name="CreateFourFictionalPeople" xml:space="preserve">
 		<value>Criar 4 Pessoas Fictícias</value>
 	</data>
+    <data name="SavingFileInDirectory" xml:space="preserve">
+	    <value>Salvando arquivo no diretório</value>
+    </data>
+    <data name="Saved" xml:space="preserve">
+	    <value>Salvo</value>
+    </data>
 </root>

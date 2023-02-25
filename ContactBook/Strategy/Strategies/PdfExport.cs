@@ -28,7 +28,7 @@ public class PdfExport : IExport, IPdfExport
             {
                 Directory.CreateDirectory(folderPath);
             }
-
+            Console.WriteLine($"{Language.SavingFileInDirectory}: {folderPath}" );
             var filePath = Path.Combine(folderPath, $"agenda{DateTime.Now:dd-MM-yyyy HH-m-s}.pdf");
             PdfWriter.GetInstance(_document, new FileStream(filePath, FileMode.Create));
 
@@ -43,6 +43,7 @@ public class PdfExport : IExport, IPdfExport
         }
         finally
         {
+            Console.WriteLine($"PDF {Language.Saved}" );
             _document.Close();
         }
     }

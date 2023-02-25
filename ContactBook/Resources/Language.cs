@@ -19,7 +19,7 @@ namespace ContactBook.Resources
 
             _culture = CultureInfo.CurrentCulture;
             var reader = new ResXResourceReader($"{AppDomain.CurrentDomain.BaseDirectory}" +
-                                                $"\\Resources\\Strings.{_culture.Name}.resx");
+                                                $"{Path.Combine("Resources", $"Strings.{_culture.Name}.resx")}");
             _resource = new ResourceSet(reader);
 
             return _resource.GetString(key);
@@ -79,5 +79,7 @@ namespace ContactBook.Resources
         public static string? Date => GetString("Date");
         public static string? TotalContacts => GetString("TotalContacts");
         public static string? CreateFourFictionalPeople => GetString("CreateFourFictionalPeople");
+        public static string? SavingFileInDirectory => GetString("SavingFileInDirectory");
+        public static string? Saved => GetString("Saved");
     }
 }
