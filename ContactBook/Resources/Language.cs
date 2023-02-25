@@ -65,5 +65,10 @@ namespace ContactBook.Resources
         public static string? ShowContacts => GetString("ShowContacts");
         public static string? PersonRemoved => GetString("PersonRemoved");
         public static string? PersonDoesNotExistInTheSchedule => GetString("PersonDoesNotExistInTheSchedule");
+        public static string? ExportPdf => GetString("ExportPdf");
+        public static string? Address => GetString("Address");
+        public static string? ContactsDirectoryDate => GetString("ContactsDirectoryDate");
+        public static string? Date => GetString("Date");
+        public static string? TotalContacts => GetString("TotalContacts");
     }
 }

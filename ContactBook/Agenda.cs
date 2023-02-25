@@ -56,4 +56,8 @@ public class Agenda
     {
         return _persons.Count;
     }
+    public List<Person> GetContacts()
+    {
+        return _persons;
+    }
 }

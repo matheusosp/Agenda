@@ -164,4 +164,19 @@
 	<data name="ShowContacts" xml:space="preserve">
 		<value>Listando contatos da agenda!</value>
 	</data>
+	<data name="ExportPdf" xml:space="preserve">
+		<value>Exportar em PDF</value>
+	</data>
+	<data name="Address" xml:space="preserve">
+		<value>Endereço</value>
+	</data>
+	<data name="ContactsDirectoryDate" xml:space="preserve">
+		<value>Agenda de Contatos - Data</value>
+	</data>
+	<data name="Date" xml:space="preserve">
+		<value>MM/dd/yyyy</value>
+	</data>
+	<data name="TotalContacts" xml:space="preserve">
+		<value>Total de Contatos</value>
+	</data>
 </root>
