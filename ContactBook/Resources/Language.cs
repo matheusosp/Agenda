@@ -15,8 +15,8 @@ namespace ContactBook.Resources
 
         private static string? GetString(string key)
         {
-            if (CultureInfo.CurrentCulture == _culture) return _resource.GetString(key);
-            
+            if (CultureInfo.CurrentCulture == _culture) return _resource?.GetString(key);
+
             _culture = CultureInfo.CurrentCulture;
             var reader = new ResXResourceReader($"{AppDomain.CurrentDomain.BaseDirectory}" +
                                                 $"\\Resources\\Strings.{_culture.Name}.resx");
@@ -58,6 +58,7 @@ namespace ContactBook.Resources
         {
             get { return GetString("EnterIdOfThePersonToRemoveFromSchedule"); }
         }
+
         public static string? HowManyPeopleAddToTheList => GetString("HowManyPeopleAddToTheList");
 
         public static string? EnterThePersonName => GetString("EnterThePersonName");
@@ -78,6 +79,5 @@ namespace ContactBook.Resources
         public static string? Date => GetString("Date");
         public static string? TotalContacts => GetString("TotalContacts");
         public static string? CreateFourFictionalPeople => GetString("CreateFourFictionalPeople");
-        
     }
 }

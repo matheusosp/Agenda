@@ -15,23 +15,25 @@ public class PdfExport : IExport, IPdfExport
     {
         _document = document;
     }
+
     public void ExportAgenda(IAgenda agenda)
     {
         try
         {
-            var folderPath =  Path.Combine(
-                Directory.GetParent(Environment.CurrentDirectory)?.Parent?.Parent?.FullName ?? 
-                AppDomain.CurrentDomain.BaseDirectory,"Reports");
-                
+            var folderPath = Path.Combine(
+                Directory.GetParent(Environment.CurrentDirectory)?.Parent?.Parent?.FullName ??
+                AppDomain.CurrentDomain.BaseDirectory, "Reports");
+
             if (!Directory.Exists(folderPath))
             {
                 Directory.CreateDirectory(folderPath);
             }
+
             var filePath = Path.Combine(folderPath, $"agenda{DateTime.Now:dd-MM-yyyy HH-m-s}.pdf");
             PdfWriter.GetInstance(_document, new FileStream(filePath, FileMode.Create));
-            
+
             _document.Open();
-            
+
             ConfigurePdfLayout();
             AddAgendaContent(agenda);
         }
@@ -44,31 +46,36 @@ public class PdfExport : IExport, IPdfExport
             _document.Close();
         }
     }
+
     private void ConfigurePdfLayout()
     {
         _document.SetMargins(20f, 20f, 20f, 20f);
         _document.SetPageSize(PageSize.A4);
         _document.NewPage();
     }
+
     private void AddAgendaContent(IAgenda agenda)
     {
         AddHeader();
         AddBody(agenda);
         AddFooter(agenda.GetQtdContacts());
     }
+
     private void AddHeader()
     {
         var header = new PdfPTable(1);
         header.WidthPercentage = 50;
-        
-        var title = new PdfPCell(new Phrase($"{Language.ContactsDirectoryDate} {DateTime.Now.ToString(Language.Date)}"));
+
+        var title = new PdfPCell(
+            new Phrase($"{Language.ContactsDirectoryDate} {DateTime.Now.ToString(Language.Date)}"));
         title.HorizontalAlignment = Element.ALIGN_CENTER;
         title.BorderWidth = 1f;
         title.BorderColor = BaseColor.BLACK;
-        
+
         header.AddCell(title);
         _document.Add(header);
     }
+
     private void AddBody(IAgenda agenda)
     {
         var body = new PdfPTable(1);
@@ -82,7 +89,7 @@ public class PdfExport : IExport, IPdfExport
             stringBuilder.Append($"\n {Language.Name}: {contact.Name}");
             stringBuilder.Append($"\n Email: {contact.Email}");
             stringBuilder.Append($"\n {Language.Address}: {contact.Endereco}");
-            
+
             var nomeCell = new PdfPCell(new Phrase(stringBuilder.ToString()))
             {
                 HorizontalAlignment = Element.ALIGN_LEFT,
@@ -92,14 +99,15 @@ public class PdfExport : IExport, IPdfExport
 
             body.AddCell(nomeCell);
         }
-        
+
         _document.Add(body);
     }
+
     private void AddFooter(int qtdContacts)
     {
         var body = new PdfPTable(1);
         body.WidthPercentage = 50;
-        
+
         var totalContacts = $"{Language.TotalContacts}: {qtdContacts}";
         var totalContactsParagraph = new PdfPCell(new Phrase(totalContacts))
         {
@@ -110,7 +118,6 @@ public class PdfExport : IExport, IPdfExport
         body.AddCell(totalContactsParagraph);
         _document.Add(body);
     }
-
 }
 
 public interface IPdfExport

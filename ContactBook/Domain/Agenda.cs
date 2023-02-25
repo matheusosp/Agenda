@@ -11,12 +11,12 @@ public class Agenda : IAgenda
     {
         _persons = new List<Person>();
     }
+
     public void AddPerson(Person person)
     {
-        person.Id = _persons.Count == 0 ?
-            1 : _persons.FindLast(p => true)!.Id + 1;
+        person.Id = _persons.Count == 0 ? 1 : _persons.FindLast(p => true)!.Id + 1;
         _persons.Add(person);
-        Console.WriteLine(Language.PersonAdded+": " + person);
+        Console.WriteLine(Language.PersonAdded + ": " + person);
         ListPersons();
     }
 
@@ -30,7 +30,7 @@ public class Agenda : IAgenda
         }
 
         _persons.Remove(person);
-        Console.WriteLine(Language.PersonRemoved +" : " + person);
+        Console.WriteLine(Language.PersonRemoved + " : " + person);
         ListPersons();
         return true;
     }
@@ -54,6 +54,7 @@ public class Agenda : IAgenda
     {
         return _persons.Count;
     }
+
     public List<Person> GetContacts()
     {
         return _persons;

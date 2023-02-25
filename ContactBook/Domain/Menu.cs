@@ -61,13 +61,14 @@ public class Menu : IMenu
                 case "5":
                     _exportContext.SetExportService((IExport)_provider.GetRequiredService<IPdfExport>());
                     _exportContext.ExportFile(_agenda);
-                    break;  
+                    break;
                 case "6":
                     for (var i = 0; i < 4; i++)
                     {
                         _agenda.AddPerson(
-                            new Person($"Nome teste {i}",$"email{i}@teste.com",$"address Teste {i}") );   
+                            new Person($"Nome teste {i}", $"email{i}@teste.com", $"address Teste {i}"));
                     }
+
                     break;
                 case "7":
                     quit = true;

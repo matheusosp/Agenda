@@ -6,7 +6,7 @@ namespace ContactBook.Strategy;
 public class ExportContext : IExportContext
 {
     private IExport? _export;
-    
+
     public void SetExportService(IExport? export)
     {
         _export = export;

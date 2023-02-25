@@ -44,6 +44,7 @@ public static class InputHelper
 
         return qtd;
     }
+
     public static string? GetEmailInput(int i)
     {
         Console.WriteLine($"{i + 1} - {Language.EnterThePersonEmail} : ");
@@ -53,7 +54,7 @@ public static class InputHelper
 
     public static string? GetAddressInput(int i)
     {
-        Console.WriteLine($"{i + 1} - {Language.EnterThePersonAddress } : ");
+        Console.WriteLine($"{i + 1} - {Language.EnterThePersonAddress} : ");
         var endereco = Console.ReadLine();
         return endereco;
     }
@@ -64,6 +65,7 @@ public static class InputHelper
         var name = Console.ReadLine();
         return name;
     }
+
     public static int GetIdInput()
     {
         Console.WriteLine(Language.EnterIdOfThePersonToRemoveFromSchedule);
